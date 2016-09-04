@@ -16,7 +16,7 @@ class SensorsController extends Controller
     public function index()
     {
         // get all sensors
-        $sensors = Sensor::all();
+        $sensors = Sensor::orderBy('sensor_type')->get();
 
         return view('sensors.index')->with('sensors', $sensors);
     }

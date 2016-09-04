@@ -15,7 +15,8 @@ class CreateGlassBreaksTable extends Migration
     {
         Schema::create('glass_breaks', function (Blueprint $table) {
             $table->increments('id');
-            $table->double('threshold');
+            $table->double('threshold')->nullable();
+            $table->string('units');
             $table->timestamps();
         });
     }

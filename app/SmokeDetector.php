@@ -17,17 +17,7 @@ class SmokeDetector extends Model
      */
     public function setState()
     {
-        $this->state = mt_rand (1, 1000) / 10;
-    }
-
-    /**
-     * gets the state that has been set
-     *
-     * @return double
-     */
-    public function getState()
-    {
-        return $this->state;
+        $this->state = number_format(mt_rand (1, 1000) / 10, 1);
     }
 
     /**

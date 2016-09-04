@@ -16,7 +16,7 @@
             <tr class="{{ $sensor->alarm() ? 'danger' : 'success' }}">
                 <td>{{ $sensor->name }}</td>
                 <td>{{ str_replace('App\\', '', $sensor->sensor_type) }}</td>
-                <td>{{ $sensor->getState() }}</td>
+                <td>{{ $sensor->sensor->state . (isset($sensor->sensor->units) ? $sensor->sensor->units : '') }}</td>
                 <td>{{ $sensor->alarm() ? 'Alarm' : '' }}</td>
             </tr>
         @endforeach

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class DoorTableSeeder extends Seeder
 {
@@ -12,8 +13,8 @@ class DoorTableSeeder extends Seeder
     public function run()
     {
         DB::table('doors')->insert(array(
-            array('threshold' => 'Opened'),
-            array('threshold' => 'Opened')
+            array('threshold' => 'Opened', 'created_at' => Carbon::now()->format('Y-m-d H:i:s'), 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')),
+            array('threshold' => 'Opened', 'created_at' => Carbon::now()->format('Y-m-d H:i:s'), 'updated_at' => Carbon::now()->format('Y-m-d H:i:s'))
         ));
     }
 }

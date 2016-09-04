@@ -26,16 +26,6 @@ class Sensor extends Model
     }
 
     /**
-     * get sensor setState
-     *
-     * @return mixed
-     */
-    public function getState()
-    {
-        return $this->sensor->getState();
-    }
-
-    /**
      * get alarm
      *
      * @return boolean

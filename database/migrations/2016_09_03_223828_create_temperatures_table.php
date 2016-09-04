@@ -15,8 +15,9 @@ class CreateTemperaturesTable extends Migration
     {
         Schema::create('temperatures', function (Blueprint $table) {
             $table->increments('id');
-            $table->double('min_threshold');
-            $table->double('max_threshold');
+            $table->double('min_threshold')->nullable();
+            $table->double('max_threshold')->nullable();
+            $table->string('units');
             $table->timestamps();
         });
     }

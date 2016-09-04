@@ -25,16 +25,6 @@ class Door extends Model
     }
 
     /**
-     * gets the state that has been set
-     *
-     * @return string
-     */
-    public function getState()
-    {
-        return $this->state;
-    }
-
-    /**
      * set alarm if state is equal to threshold
      *
      * @return boolean

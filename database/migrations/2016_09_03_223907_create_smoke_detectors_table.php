@@ -15,7 +15,8 @@ class CreateSmokeDetectorsTable extends Migration
     {
         Schema::create('smoke_detectors', function (Blueprint $table) {
             $table->increments('id');
-            $table->double('threshold');
+            $table->double('threshold')->nullable();
+            $table->string('units');
             $table->timestamps();
         });
     }
