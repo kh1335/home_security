@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Temperature extends Model
 {
-    protected $tabel = 'temperatures';
+    protected $table = 'temperatures';
 
     public  $state;
 

@@ -21,3 +21,47 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+
+/* Testing Models */
+$factory->define(App\Door::class, function (Faker\Generator $faker) {
+    return [
+        'id' => 1,
+        'threshold' => 'Opened',
+    ];
+});
+
+$factory->define(App\GlassBreak::class, function (Faker\Generator $faker) {
+    return [
+        'id' => 1,
+        'threshold' => 556.00,
+        'units' => 'hz'
+    ];
+});
+
+$factory->define(App\SmokeDetector::class, function (Faker\Generator $faker) {
+    return [
+        'id' => 1,
+        'threshold' => 55.0,
+        'units' => '&#37; Visibility'
+    ];
+});
+
+$factory->define(App\Temperature::class, function (Faker\Generator $faker) {
+    return [
+        'id' => 1,
+        'min_threshold' => 32.0,
+        'max_threshold' => 80.0,
+        'units' => '&#176;'
+    ];
+});
+
+$factory->define(App\Sensor::class, function (Faker\Generator $faker) {
+    return [
+        'id' => 1,
+        'name' => 'Test Sensor',
+        'sensor_type' => 'App\Temperature',
+        'sensor_id' => factory(App\Temperature::class)->make()->id,
+        'sensor' => factory(App\Temperature::class)->make()
+    ];
+});
