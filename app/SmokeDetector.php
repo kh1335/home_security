@@ -27,6 +27,10 @@ class SmokeDetector extends Model
      */
     public function alarm()
     {
+        if(!isset($this->state)) {
+            return true;
+        }
+
         return $this->state <= $this->threshold;
     }
 }
