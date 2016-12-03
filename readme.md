@@ -20,8 +20,7 @@ You've decided to build a custom security system for your house.  You'd like to 
       - 3 Smoke Detecors
       
 ## Sample output      
-   
-
+![screen shot 2016-12-03 at 4 48 28 pm](https://cloud.githubusercontent.com/assets/4495441/20862767/9e9fae84-b979-11e6-8617-d2d5db2f9760.png)   
 
 ## SetUp
     * composer install
